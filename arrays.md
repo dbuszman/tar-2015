@@ -47,3 +47,5 @@ a.uniq
 #=> [0, 1, 2, 3, 4]
 
 ```
+
+#### [Mały program prezentujący możliwości tablic w języku RUBY](programs/palindrom.rb) 
