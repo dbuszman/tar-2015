@@ -14,9 +14,9 @@ Podręczne linki:
 
 ## Zadania
 
-1. [ ] Learn X in Y minutes, where X = Ruby Array/Hash/Enumerable  
+1. [x] Learn X in Y minutes, where X = Ruby Array/Hash/Enumerable  
   - [x] [Arrays](arrays.md)
   - [x] [Hash](hash.md)
-  - [ ] [Enumerable](enumerable.md)
+  - [x] [Enumerable](enumerable.md)
 2. [ ] Coś do przetestowania na początek
 3. [ ] Program/Biblioteka/Aplikacja WWW
