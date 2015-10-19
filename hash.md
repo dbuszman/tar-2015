@@ -51,3 +51,40 @@ studenci.clear
 #=> {}
 
 ```
+
+>Prezentowanie tablic hash
+
+```ruby
+
+studenci = { "Jan" => "absolwent", "Tomasz" => "magister", "Piotr" => "student" }
+
+studenci.each {|key, value| puts "#{key} to #{value}" }
+#=>Jan to absolwent
+#=>Tomasz to magister
+#=>Piotr to student
+
+```
+
+>Zamiana kluczy z obiektami
+
+```ruby
+
+studenci = { "Jan" => "absolwent", "Tomasz" => "magister", "Piotr" => "student" }
+
+studenci.invert
+#=> {"absolwent"=>"Jan", "magister"=>"Tomasz", "student"=>"Piotr"}
+
+```
+
+>Łączenie dwóch tablic hash
+
+```ruby
+
+studenci1 = { "Jan" => "absolwent", "Tomasz" => "magister", "Piotr" => "student" }
+
+studenci2 = {"Tomasz" => "magister", "Piotr" => "student", "Adam"=>"słuchacz" }
+
+ studenci1.merge!(studenci2)
+#=> {"Jan"=>"absolwent", "Tomasz"=>"magister", "Piotr"=>"student", "Adam"=>"słuchacz"} 
+
+```
