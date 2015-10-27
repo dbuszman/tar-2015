@@ -7,11 +7,12 @@
 
 ```ruby
 
-studenci = Hash.new
+studenci = Hash.new {}
+puts studenci
 
-studenci = Hash.new( "student" )
+studenci = Hash.new('student')
 
-studenci["Jan"]
+studenci['Jan']
 #=> "student"
 
 ```
@@ -20,20 +21,21 @@ studenci["Jan"]
 
 ```ruby
 
-studenci["Tomasz"]="absolwent"
+studenci['Tomasz'] = 'absolwent'
 #=> "absolwent"
 
 studenci.keys
 #=> ["Tomasz"]
 
-studenci["Tomasz"].upcase
+studenci['Tomasz'].upcase
 #=> "ABSOLWENT"
 
-studenci.store("Andrzej", "magister")
+studenci.store('Andrzej', 'magister')
 #=> "magister"
 
 studenci
 #=> {"Tomasz"=>"absolwent", "Andrzej"=>"magister"}
+
 
 ```
 
@@ -41,10 +43,10 @@ studenci
 
 ```ruby
 
-studenci.assoc("Tomasz")
+studenci.assoc('Tomasz')
 #=> ["Tomasz", "absolwent"]
 
-studenci.assoc("Jan")
+studenci.assoc('Jan')
 #=> nil
 
 studenci.clear
@@ -56,12 +58,14 @@ studenci.clear
 
 ```ruby
 
-studenci = { "Jan" => "absolwent", "Tomasz" => "magister", "Piotr" => "student" }
+studenci = { 'Jan' => 'absolwent', 'Tomasz' => 'magister',
+             'Piotr' => 'student' }
 
-studenci.each {|key, value| puts "#{key} to #{value}" }
+studenci.each { |key, value| puts "#{key} to #{value}" }
 #=>Jan to absolwent
 #=>Tomasz to magister
 #=>Piotr to student
+
 
 ```
 
@@ -69,7 +73,8 @@ studenci.each {|key, value| puts "#{key} to #{value}" }
 
 ```ruby
 
-studenci = { "Jan" => "absolwent", "Tomasz" => "magister", "Piotr" => "student" }
+studenci = { 'Jan' => 'absolwent', 'Tomasz' => 'magister',
+             'Piotr' => 'student' }
 
 studenci.invert
 #=> {"absolwent"=>"Jan", "magister"=>"Tomasz", "student"=>"Piotr"}
@@ -80,11 +85,13 @@ studenci.invert
 
 ```ruby
 
-studenci1 = { "Jan" => "absolwent", "Tomasz" => "magister", "Piotr" => "student" }
+studenci1 = { 'Jan' => 'absolwent', 'Tomasz' => 'magister',
+              'Piotr' => 'student' }
 
-studenci2 = {"Tomasz" => "magister", "Piotr" => "student", "Adam"=>"słuchacz" }
+studenci2 = { 'Tomasz' => 'magister', 'Piotr' => 'student',
+              'Adam' => 'słuchacz' }
 
- studenci1.merge!(studenci2)
-#=> {"Jan"=>"absolwent", "Tomasz"=>"magister", "Piotr"=>"student", "Adam"=>"słuchacz"} 
+studenci1.merge!(studenci2)
+#=> {"Jan"=>"absolwent", "Tomasz"=>"magister", "Piotr"=>"student", "Adam"=>"słuchacz"}
 
 ```
