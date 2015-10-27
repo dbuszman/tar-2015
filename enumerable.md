@@ -9,10 +9,10 @@
 
 ```ruby
 
-%w[jeden dwa trzy].all? { |liczebnik| liczebnik.length >= 4 }
+%w(jeden dwa trzy).all? { |liczebnik| liczebnik.length >= 4 }
 #=> false
 
-%w[jeden dwa trzy].any? { |liczebnik| liczebnik.length >= 4 }
+%w(jeden dwa trzy).any? { |liczebnik| liczebnik.length >= 4 }
 #=> true
 
 ```
@@ -21,7 +21,7 @@
 
 ```ruby
 
-("a".."g").detect   { |i| i > "d" and i < "g" }
+('a'..'g').detect { |i| i > 'd' && i < 'g' }
 #=> "e"
 
 ```
@@ -30,7 +30,7 @@
 
 ```ruby
 
-("a".."h").each_cons(3) { |a| p a }
+('a'..'h').each_cons(3) { |a| p a }
 #=>["a", "b", "c"]
 #=>["b", "c", "d"]
 #=>["c", "d", "e"]
@@ -38,7 +38,7 @@
 #=>["e", "f", "g"]
 #=>["f", "g", "h"]
 
-("a".."h").each_slice(3) { |a| p a }
+('a'..'h').each_slice(3) { |a| p a }
 #=>["a", "b", "c"]
 #=>["d", "e", "f"]
 #=>["g", "h"]
@@ -49,10 +49,10 @@
 
 ```ruby
 
-("a".."g").find_all { |i| i > "d" }
+('a'..'g').find_all { |i| i > 'd' }
 #=> ["e", "f", "g"]
 
-("a".."h").grep "b".."e"
+('a'..'h').grep 'b'..'e'
 #=> ["b", "c", "d", "e"]
 
 ```
@@ -70,8 +70,8 @@ studenci.min
 studenci.max
 #=> "Tomasz"
 
-studenci.minmax { |a,b| a.length <=> b.length }
- => ["Jan", "Krzysztof"]
+studenci.minmax { |a, b| a.length <=> b.length }
+#=> ["Jan", "Krzysztof"]
 
 ```
 
@@ -82,7 +82,7 @@ studenci.minmax { |a,b| a.length <=> b.length }
 studenci = %w(Jan Adam Tomasz Krzysztof Anna Agnieszka Magdalena)
 #=> ["Jan", "Adam", "Tomasz", "Krzysztof", "Anna", "Agnieszka", "Magdalena"]
 
-studenci.partition { |imie| imie.length <= 4}
+studenci.partition { |imie| imie.length <= 4 }
 #=> [["Jan", "Adam", "Anna"], ["Tomasz", "Krzysztof", "Agnieszka", "Magdalena"]]
 
 ```
@@ -94,10 +94,11 @@ studenci.partition { |imie| imie.length <= 4}
 studenci = %w(Jan Adam Tomasz Krzysztof Anna Agnieszka Magdalena)
 #=> ["Jan", "Adam", "Tomasz", "Krzysztof", "Anna", "Agnieszka", "Magdalena"]
 
-studenci.slice_after("Krzysztof").to_a
+studenci.slice_after('Krzysztof').to_a
 #=> [["Jan", "Adam", "Tomasz", "Krzysztof"], ["Anna", "Agnieszka", "Magdalena"]]
 
-studenci.slice_when { |imie| imie[0] == "A" }.to_a
-#=> [["Jan", "Adam"], ["Tomasz", "Krzysztof", "Anna"], ["Agnieszka"], ["Magdalena"]] 
+studenci.slice_when { |imie| imie[0] == 'A' }.to_a
+#=> [["Jan", "Adam"], ["Tomasz", "Krzysztof", "Anna"], ["Agnieszka"],
+#=>  ["Magdalena"]]
 
 ```
