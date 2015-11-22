@@ -36,13 +36,9 @@ def heapsort(arr, heapsize)
   end
 end
 
-arr = []
-print arr
-puts "\n\n"
-
-heapsize = arr.size - 1
-
-heapsort(arr, heapsize)
-
-print arr
-puts "\n\n"
+# print arr
+# puts "\n\n"
+#
+#
+# print arr
+# puts "\n\n"
