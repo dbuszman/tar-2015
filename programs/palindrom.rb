@@ -1,5 +1,3 @@
-#!/usr/bin/ruby -w
-
 # Program wykorzystujący podstawowe własności tworzenia tablic w języku RUBY
 
 puts "\n"
