@@ -35,10 +35,3 @@ def heapsort(arr, heapsize)
     heapify(arr, 0, heapsize)
   end
 end
-
-# print arr
-# puts "\n\n"
-#
-#
-# print arr
-# puts "\n\n"

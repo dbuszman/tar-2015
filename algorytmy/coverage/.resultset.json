@@ -1,0 +1,46 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/dariusz/Dokumenty/git/tar-2015/algorytmy/lib/heap_sort.rb": [
+        null,
+        null,
+        1,
+        null,
+        null,
+        56,
+        16,
+        null,
+        40,
+        null,
+        56,
+        null,
+        56,
+        31,
+        31,
+        null,
+        null,
+        1,
+        null,
+        4,
+        4,
+        10,
+        10,
+        null,
+        null,
+        null,
+        1,
+        4,
+        null,
+        4,
+        4,
+        15,
+        15,
+        15,
+        15,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1448303350
+  }
+}

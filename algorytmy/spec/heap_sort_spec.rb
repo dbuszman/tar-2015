@@ -8,7 +8,7 @@ describe 'before and after' do
     @arr = []
 
     # Sprawdam czy zainicjalizowana tablica arr jest pusta
-    expect(@arr.empty?).to eq(true)
+    expect(@arr).to be_empty
 
     @arr = [5, 3, 7, 1]
     @heapsize = @arr.length - 1
