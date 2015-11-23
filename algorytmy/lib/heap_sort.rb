@@ -1,7 +1,8 @@
-# heapsort
+# in lib/heapsort.rb
+# Sortowanie kopcowe
 
 def heapify(arr, i, heapsize)
-  # metoda heapify to przywracanie wlasnosci kopca
+  # przywracanie wlasnosci kopca
   # lewy syn: 2 * i, prawy syn: 2 * i + 1
   if (2 * i <= heapsize) && (arr[2 * i] > arr[i])
     larg = 2 * i
@@ -16,7 +17,7 @@ def heapify(arr, i, heapsize)
 end
 
 def build_heap(arr, heapsize)
-  # metoda build_heap to budowanie kopca
+  # budowanie kopca
   i = heapsize / 2
   while i >= 0
     heapify(arr, i, heapsize)
@@ -27,11 +28,17 @@ end
 def heapsort(arr, heapsize)
   build_heap(arr, heapsize)
 
-  i = heapsize
-  while i >= 1
-    arr[i], arr[0] = arr[0], arr[i]
-    i -= 1
+  while heapsize >= 1
+    arr[heapsize], arr[0] = arr[0], arr[heapsize]
     heapsize -= 1
     heapify(arr, 0, heapsize)
   end
+end
+
+def extract_max(arr, heapsize)
+  heapsort(arr, heapsize)
+  max = arr[heapsize]
+  heapsize -= 1
+  arr.delete(max)
+  heapify(arr, 0, heapsize)
 end

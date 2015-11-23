@@ -3,8 +3,8 @@ SimpleCov.start
 
 require_relative '../lib/heap_sort'
 
-describe 'before and after' do
-  before :all do
+describe 'before' do
+  before :each do
     @arr = []
 
     # Sprawdam czy zainicjalizowana tablica arr jest pusta
@@ -22,6 +22,9 @@ describe 'before and after' do
 
     it 'should be defined' do
       expect { heapsort(@arr, @heapsize) }.not_to raise_error
+    end
+    it 'should not have nil element' do
+      expect(@arr).not_to include(nil)
     end
 
     it 'returns the correct sort' do
@@ -44,6 +47,34 @@ describe 'before and after' do
       expect(@arr.last).to eq(100)
       heapsort(@arr, @heapsize)
       expect(@arr.last).to eq(100)
+    end
+  end
+  describe '#build_heap' do
+    it 'should be defined' do
+      # @arr = [5, 3, 7, 1]
+      expect { build_heap(@arr, @heapsize) }.not_to raise_error
+    end
+    it 'should not have nil element' do
+      expect(@arr).not_to include(nil)
+    end
+  end
+  describe '#heapify' do
+    it 'should be defined' do
+      expect { heapify(@arr, 0, @heapsize) }.not_to raise_error
+    end
+    it 'should not have nil element' do
+      expect(@arr).not_to include(nil)
+    end
+  end
+  describe '#extract_max' do
+    it 'should be defined' do
+      expect { extract_max([2, 5, 3, 1, 0], 4) }.not_to raise_error
+    end
+
+    it 'extract max value' do
+      # @arr = [5, 3, 7, 1]
+      extract_max(@arr, @heapsize)
+      expect(@arr).not_to include(7)
     end
   end
 end
