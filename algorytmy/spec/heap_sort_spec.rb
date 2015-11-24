@@ -3,7 +3,7 @@ SimpleCov.start
 
 require_relative '../lib/heap_sort'
 
-describe 'before' do
+RSpec.describe 'before' do
   before :each do
     @arr = []
 
