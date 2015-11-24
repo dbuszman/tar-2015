@@ -18,5 +18,5 @@ Podręczne linki:
   - [x] [Arrays](arrays.md)
   - [x] [Hash](hash.md)
   - [x] [Enumerable](enumerable.md)
-2. [ ] Coś do przetestowania na początek
+2. [x] [Algorytmy + RSpec](algorytmy)
 3. [ ] Program/Biblioteka/Aplikacja WWW
